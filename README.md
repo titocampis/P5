@@ -31,7 +31,7 @@ permitan visualizar el funcionamiento de la curva ADSR.
 * Un instrumento con una envolvente ADSR genérica, para el que se aprecie con claridad cada uno de sus
   parámetros: ataque (A), caída (D), mantenimiento (S) y liberación (R).
   
-  FOTO
+  <img src="img/ima1.png" width="640" align="center">
   
   Hemos generado el fichero .wav con el programa synth y la curva ADSR deseada, la visualizamos en un editor de audio y vemos
   que en su representación temporal se observa de maravilla la curva ADSR, observando como la amplitud de la nota no se
@@ -43,7 +43,7 @@ permitan visualizar el funcionamiento de la curva ADSR.
   - Para un instrumento de este tipo, tenemos dos situaciones posibles:
     * El intérprete mantiene la nota *pulsada* hasta su completa extinción.
     
-    FOTO
+    <img src="img/ima2.png" width="640" align="center">
     
     Observamos como el ataque es rápido, la caída es lenta, porque la nota se va apagando lentamente, no tiene mantenimiento y
     la libración también es muy lenta, pues sería como si dejásemos la cuerda pulsada, así solo se liberaría realmente al
@@ -53,21 +53,22 @@ permitan visualizar el funcionamiento de la curva ADSR.
     * El intérprete da por finalizada la nota antes de su completa extinción, iniciándose una disminución
 	  abrupta del sonido hasta su finalización.
     
-    FOTO
+    <img src="img/ima3.png" width="640" align="center">
     
     Observamos el ataque rápido, la caída lenta porque la nota se va apagando lentamente y de repente soltamos, dejando muy
     poco tiempo de liberación. Se observa como la nota se acaba rápidamente, sin llegar ni de lejos a la siguiente.
 	  
   - Debera representar en esta memoria **ambos** posibles finales de la nota.
+  
 * Un instrumento *plano*, como los de cuerdas frotadas (violines y semejantes) o algunos de viento. En
   ellos, el ataque es relativamente rápido hasta alcanzar el nivel de mantenimiento (sin sobrecarga), y la
   liberación también es bastante rápida.
   
-  FOTO
+    <img src="img/ima4.png" width="640" align="center">
   
-  Si observamos vemos como la curva ADSR se cumple a la perfección con lo estipulado, el ataque relativamente rápido, la caída
-  más o menos rápida, un mantenimiento muy largo y una liberación lenta, esto lo hicimos porque nos parecía más verosímil al
-  sonido de un violín en que las notas se solapan, es decir una no se apaga hasta que no empieza la siguiente.
+    Si observamos vemos como la curva ADSR se cumple a la perfección con lo estipulado, el ataque relativamente rápido, la
+    caída más o menos rápida, un mantenimiento muy largo y una liberación lenta, esto lo hicimos porque nos parecía más
+    verosímil al sonido de un violín en que las notas se solapan, es decir una no se apaga hasta que no empieza la siguiente.
   
 Para los cuatro casos, deberá incluir una gráfica en la que se visualice claramente la curva ADSR. Deberá
 añadir la información necesaria para su correcta interpretación, aunque esa información puede reducirse a
@@ -106,18 +107,20 @@ mediante búsqueda de los valores en una tabla.
     grandes en el volumen del sonido y su amplitud y por el contrario una frecuencia de modulación pequeña, es decir que habrá
     cambios cada más tiempo, no son muy seguidos los cambios.
     
-    FOTO
+    <img src="img/tremolo.png" width="640" align="center">
     
     En el segundo caso que se muestra a continuación, las variaciones serán más verosímiles y así la amplitud de la sinusoide
     no se verá tan afectada:
     
-    FOTO
+    <img src="img/tremolo2.png" width="640" align="center">
     
     En cuanto al vibrato, sabemos que hace variar la frecuencia fundamental de la nota en función de los parámetros Intensidad
     y la frecuencia de modulación. En la siguiente imagen podemos observar como las dos empiezan a la vez, pero no oscilan a
     la misma frecuencia ya que el vibrato la va cambiando:
     
-    FOTOS
+    <img src="img/vibrato.png" width="640" align="center">
+    
+    <img src="img/vibrato2.png" width="640" align="center">
     
     En esta segunda imagen podemos ver como mientras en la segunda gráfica la frecuencia se mantiene constante, arriba la
     frecuencia va variando, comprimiendo y estirando la frecuencia fundamental de una misma nota. Este efecto puede ser
@@ -133,7 +136,7 @@ mediante búsqueda de los valores en una tabla.
   el efecto, e indique, a continuación, la orden necesaria para generar los ficheros de audio usando el
   programa `synth`.
     
-    En nuestro caso, iguiendo ciertos conocimientos que teníamos de música y pedales, sabemos que la distorsión de la señal
+    En nuestro caso, siguiendo ciertos conocimientos que teníamos de música y pedales, sabemos que la distorsión de la señal
     (algo muy deseado en estilos como el rock, en ciertos instrumentos como la guitarra) se produce haciendo saturar la señal
     que sale del instrumento. Es decir, elevando la tensión de la señal que sale de esta y recortando la señal por arriba,
     como si el amplificador no pudiese sacar toda su amplitud. Cuando la distorsión empezó a usarse, esto se producía
@@ -151,12 +154,12 @@ mediante búsqueda de los valores en una tabla.
     Nuestro algoritmo sencillo, primero, eleva x4 la amplitud de la señal original y luego, recorta la señal a partir de
     cierta amplitud.
     
-    FOTO
+    <img src="img/cod_distorsion.png" width="640" align="center">
     
     Para llamar a este efecto, le asignamos un numero de efecto como a tremolo o vibrato y lo construimos en el fichero
     effects.orc.
     
-    FOTO
+    <img src="img/num_dist.png" width="640" align="center">
     
     Luego modificamos el fichero doremi como lo hacíamos con tremolo y vibrato. En este caso le hemos asignado el numero 13,
     el mismo que tremolo, así que lo aplicaríamos igual.
@@ -167,7 +170,7 @@ mediante búsqueda de los valores en una tabla.
     considerable ya no tiene la forma redondeada del seno si no que satura, generando una distorsión muy suave pues satura en
     puntos muy concretos.
     
-    FOTO
+    <img src="img/distorsion.png" width="640" align="center">
     
     2. Distorsión heavy: si ponemos una A_MAX pequeña, conseguiremos que la señal quede muy distorsionada, y que haya perdido
     casi por completo su forma sinusoidal. Uno de los efectos secundarios de la distorsión elevada es una pérdida de la
@@ -176,7 +179,7 @@ mediante búsqueda de los valores en una tabla.
     parecido, solo se notaria la diferencia si tocas muy flojo, cuando la señal no satura. En la imagen se observa como
     incluso amplitudes pequeñas estás saturadas
     
-    FOTO
+    <img src="img/distorsion2.png" width="640" align="center">
 
 ### Síntesis FM.
 
@@ -192,7 +195,9 @@ deberá venir expresado en semitonos.
     producimos un instrumento que llamamos seno_vibrato que relamente se corresponde al instrumento producido mediante
     Sintesis FM.
     
-    FOTOS
+    CODIGO
+    
+    GRAFICA
   
 - Use el instrumento para generar un sonido tipo clarinete y otro tipo campana. Tome los parámetros del
   sonido (N1, N2 e I) y de la envolvente ADSR del citado artículo. Con estos sonidos, genere sendas escalas
@@ -210,14 +215,14 @@ deberá venir expresado en semitonos.
     Aquí vemos según el articulo, la envolvente ADSR del instrumento Clarinete. Según esto, definimos nuestros parámetros.
     También, según el artículo la relación N1/N2 tiene que ser 3/1 y así lo dejamos.
     
-    FOTO
+    <img src="img/clarinete.png" width="640" align="center">
     
     Bell
     
     En la siguiente gráfica, observamos la envolvente ADSR de una campana. También observamos la relación N1/N2 tiene que ser
     1/1.4, esta si la seguimos, porque a demás al no ser entero, generamos una relación inarmónica como la de las campanas.
     
-    FOTO
+    <img src="img/bell.png" width="640" align="center">
 
 ### Orquestación usando el programa synth.
 

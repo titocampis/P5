@@ -35,7 +35,7 @@ permitan visualizar el funcionamiento de la curva ADSR.
   
   Hemos generado el fichero .wav con el programa synth y la curva ADSR deseada, la visualizamos en un editor de audio y vemos
   que en su representación temporal se observa de maravilla la curva ADSR, observando como la amplitud de la nota no se
-  mantiene constante a lo largo del tiempo si no que pasa por diferentes fases de intensidad. Observamos un ataque rápido, una
+  mantiene constante a lo largo del tiempo sino que pasa por diferentes fases de intensidad. Observamos un ataque rápido, una
   caída moderada, un largo mantenimiento y una liberación normal.
   
 * Un instrumento *percusivo*, como una guitarra o un piano, en el que el sonido tenga un ataque rápido, no
@@ -45,18 +45,18 @@ permitan visualizar el funcionamiento de la curva ADSR.
     
     <img src="img/ima2.png" width="640" align="center">
     
-    Observamos como el ataque es rápido, la caída es lenta, porque la nota se va apagando lentamente, no tiene mantenimiento y
-    la libración también es muy lenta, pues sería como si dejásemos la cuerda pulsada, así solo se liberaría realmente al
-    empezar la siguiente nota y levantar la presión de esta anterior.
-
+    Observamos que como el ataque es rápido, la caída es lenta, ya que la nota se va apagando lentamente, no tiene
+    mantenimiento y la libración también es muy lenta, pues sería como si dejásemos la cuerda pulsada y así solo se liberaría
+    realmente al empezar la siguiente nota y levantar la presión de esta anterior.
     
     * El intérprete da por finalizada la nota antes de su completa extinción, iniciándose una disminución
 	  abrupta del sonido hasta su finalización.
     
     <img src="img/ima3.png" width="640" align="center">
     
-    Observamos el ataque rápido, la caída lenta porque la nota se va apagando lentamente y de repente soltamos, dejando muy
-    poco tiempo de liberación. Se observa como la nota se acaba rápidamente, sin llegar ni de lejos a la siguiente.
+    Observamos que en el ataque rápido la caída es lenta, porque la nota se va apagando lentamente y de repente soltamos,
+    dejando muy poco tiempo de liberación. Se observa como la nota se acaba rápidamente, sin llegar ni de lejos a la
+    siguiente.
 	  
   - Debera representar en esta memoria **ambos** posibles finales de la nota.
   
@@ -66,9 +66,10 @@ permitan visualizar el funcionamiento de la curva ADSR.
   
     <img src="img/ima4.png" width="640" align="center">
   
-    Si observamos vemos como la curva ADSR se cumple a la perfección con lo estipulado, el ataque relativamente rápido, la
-    caída más o menos rápida, un mantenimiento muy largo y una liberación lenta, esto lo hicimos porque nos parecía más
-    verosímil al sonido de un violín en que las notas se solapan, es decir una no se apaga hasta que no empieza la siguiente.
+    Si observamos, vemos como la curva ADSR se cumple a la perfección con lo estipulado, el ataque relativamente rápido, la
+    caída más o menos rápida, un mantenimiento muy largo y una liberación lenta. Esto lo hicimos porque nos parecía más
+    verosímil como el sonido de un violín en el que las notas se solapan, es decir, una no se apaga hasta que no empieza la
+    siguiente.
   
 Para los cuatro casos, deberá incluir una gráfica en la que se visualice claramente la curva ADSR. Deberá
 añadir la información necesaria para su correcta interpretación, aunque esa información puede reducirse a
@@ -88,8 +89,8 @@ mediante búsqueda de los valores en una tabla.
   tabla y los de la señal generada.
     
     El instrumento seno funciona de la siguiente manera: se coge un periodo de la señal sinusoidal y se guarda en la tabla con
-    N muestras, ese periodo registrado en la tabla se puede recorrer más rápido o más lento, y eso es lo que haremos para
-    generar notas más agudas, o más graves respectivamente.
+    N muestras, a continuación ese periodo registrado en la tabla se puede recorrer más rápido o más lento, y eso es lo que
+    haremos para generar notas más agudas, o más graves respectivamente.
     
     FALTA!
     
@@ -103,6 +104,8 @@ mediante búsqueda de los valores en una tabla.
   índice de modulación) en la señal generada (se valorará que la explicación esté contenida en las propias
   gráficas, sin necesidad de *literatura*).
     
+    ####***Tremoto***
+    
     Hemos generado dos gráficas de Tremolo, una con una profundidad de modulación muy grande, por tanto, habrá variaciones muy
     grandes en el volumen del sonido y su amplitud y por el contrario una frecuencia de modulación pequeña, es decir que habrá
     cambios cada más tiempo, no son muy seguidos los cambios.
@@ -114,7 +117,9 @@ mediante búsqueda de los valores en una tabla.
     
     <img src="img/tremolo2.png" width="640" align="center">
     
-    En cuanto al vibrato, sabemos que hace variar la frecuencia fundamental de la nota en función de los parámetros Intensidad
+    ####***Vibrato***
+    
+    En cuanto al vibrato, sabemos que varía la frecuencia fundamental de la nota en función de los parámetros Intensidad
     y la frecuencia de modulación. En la siguiente imagen podemos observar como las dos empiezan a la vez, pero no oscilan a
     la misma frecuencia ya que el vibrato la va cambiando:
     
@@ -166,18 +171,20 @@ mediante búsqueda de los valores en una tabla.
     
     Observando los resultados vemos que hemos obtenido el efecto deseado.
     
-    1. Una distorsión suave: apreciamos como la señal mantiene su forma casi todo el rato, pero cuando pasa un nivel bastante
+    ####1. Una distorsión suave
+    Apreciamos como la señal mantiene su forma casi todo el rato, pero cuando pasa un nivel bastante
     considerable ya no tiene la forma redondeada del seno si no que satura, generando una distorsión muy suave pues satura en
     puntos muy concretos.
     
     <img src="img/distorsion.png" width="640" align="center">
     
-    2. Distorsión heavy: si ponemos una A_MAX pequeña, conseguiremos que la señal quede muy distorsionada, y que haya perdido
-    casi por completo su forma sinusoidal. Uno de los efectos secundarios de la distorsión elevada es una pérdida de la
-    dinámica que genera el músico al tocar un instrumento: a causa de esta saturación grande, la nota prácticamente siempre
-    que se toca algo fuerte satura y se aplica un efecto de compresión, en el que tocar fuerte y normal prácticamente suena
-    parecido, solo se notaria la diferencia si tocas muy flojo, cuando la señal no satura. En la imagen se observa como
-    incluso amplitudes pequeñas estás saturadas
+    ####2. Distorsión heavy
+    Si ponemos una A_MAX pequeña, conseguiremos que la señal quede muy distorsionada, y que haya perdido casi por completo su
+    forma sinusoidal. Uno de los efectos secundarios de la distorsión elevada es una pérdida de la dinámica que genera el
+    músico al tocar un instrumento: a causa de esta saturación grande, la nota prácticamente siempre que se toca algo fuerte
+    satura y se aplica un efecto de compresión, en el que tocar fuerte y normal prácticamente suena parecido, solo se notaria
+    la diferencia si tocas muy flojo, cuando la señal no satura. En la imagen se observa como incluso amplitudes pequeñas
+    estás saturadas.
     
     <img src="img/distorsion2.png" width="640" align="center">
 
@@ -210,14 +217,14 @@ deberá venir expresado en semitonos.
     Basándonos en el articulo de John M Chowning y en nuestro código, hemos buscado la relación entre N1/N2 y la envolvente
     ADSR para cada uno de los instrumentos que se nos pide (campana y clarinete).
     
-    Clarinete
+    ####***Clarinete***
     
     Aquí vemos según el articulo, la envolvente ADSR del instrumento Clarinete. Según esto, definimos nuestros parámetros.
     También, según el artículo la relación N1/N2 tiene que ser 3/1 y así lo dejamos.
     
     <img src="img/clarinete.png" width="640" align="center">
     
-    Bell
+    ####***Bell***
     
     En la siguiente gráfica, observamos la envolvente ADSR de una campana. También observamos la relación N1/N2 tiene que ser
     1/1.4, esta si la seguimos, porque a demás al no ser entero, generamos una relación inarmónica como la de las campanas.

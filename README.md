@@ -171,20 +171,18 @@ mediante búsqueda de los valores en una tabla.
     
     Observando los resultados vemos que hemos obtenido el efecto deseado.
     
-    **1. Una distorsión suave**
-    Apreciamos como la señal mantiene su forma casi todo el rato, pero cuando pasa un nivel bastante
-    considerable ya no tiene la forma redondeada del seno si no que satura, generando una distorsión muy suave pues satura en
-    puntos muy concretos.
+    **1. Una distorsión suave**: Apreciamos como la señal mantiene su forma casi todo el rato, pero cuando pasa un nivel
+    bastante considerable ya no tiene la forma redondeada del seno si no que satura, generando una distorsión muy suave pues
+    satura en puntos muy concretos.
     
     <img src="img/distorsion.png" width="640" align="center">
     
-    **2. Distorsión heavy**
-    Si ponemos una A_MAX pequeña, conseguiremos que la señal quede muy distorsionada, y que haya perdido casi por completo su
-    forma sinusoidal. Uno de los efectos secundarios de la distorsión elevada es una pérdida de la dinámica que genera el
-    músico al tocar un instrumento: a causa de esta saturación grande, la nota prácticamente siempre que se toca algo fuerte
-    satura y se aplica un efecto de compresión, en el que tocar fuerte y normal prácticamente suena parecido, solo se notaria
-    la diferencia si tocas muy flojo, cuando la señal no satura. En la imagen se observa como incluso amplitudes pequeñas
-    estás saturadas.
+    **2. Distorsión heavy**: Si ponemos una A_MAX pequeña, conseguiremos que la señal quede muy distorsionada, y que haya
+    perdido casi por completo su forma sinusoidal. Uno de los efectos secundarios de la distorsión elevada es una pérdida de
+    la dinámica que genera el músico al tocar un instrumento: a causa de esta saturación grande, la nota prácticamente siempre
+    que se toca algo fuerte satura y se aplica un efecto de compresión, en el que tocar fuerte y normal prácticamente suena
+    parecido, solo se notaria la diferencia si tocas muy flojo, cuando la señal no satura. En la imagen se observa como
+    incluso amplitudes pequeñas estás saturadas.
     
     <img src="img/distorsion2.png" width="640" align="center">
 

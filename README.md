@@ -104,7 +104,7 @@ mediante búsqueda de los valores en una tabla.
   índice de modulación) en la señal generada (se valorará que la explicación esté contenida en las propias
   gráficas, sin necesidad de *literatura*).
     
-    ####***Tremoto***
+    ***Tremoto***
     
     Hemos generado dos gráficas de Tremolo, una con una profundidad de modulación muy grande, por tanto, habrá variaciones muy
     grandes en el volumen del sonido y su amplitud y por el contrario una frecuencia de modulación pequeña, es decir que habrá
@@ -117,7 +117,7 @@ mediante búsqueda de los valores en una tabla.
     
     <img src="img/tremolo2.png" width="640" align="center">
     
-    ####***Vibrato***
+    ***Vibrato***
     
     En cuanto al vibrato, sabemos que varía la frecuencia fundamental de la nota en función de los parámetros Intensidad
     y la frecuencia de modulación. En la siguiente imagen podemos observar como las dos empiezan a la vez, pero no oscilan a
@@ -171,14 +171,14 @@ mediante búsqueda de los valores en una tabla.
     
     Observando los resultados vemos que hemos obtenido el efecto deseado.
     
-    ####1. Una distorsión suave
+    **1. Una distorsión suave**
     Apreciamos como la señal mantiene su forma casi todo el rato, pero cuando pasa un nivel bastante
     considerable ya no tiene la forma redondeada del seno si no que satura, generando una distorsión muy suave pues satura en
     puntos muy concretos.
     
     <img src="img/distorsion.png" width="640" align="center">
     
-    ####2. Distorsión heavy
+    **2. Distorsión heavy**
     Si ponemos una A_MAX pequeña, conseguiremos que la señal quede muy distorsionada, y que haya perdido casi por completo su
     forma sinusoidal. Uno de los efectos secundarios de la distorsión elevada es una pérdida de la dinámica que genera el
     músico al tocar un instrumento: a causa de esta saturación grande, la nota prácticamente siempre que se toca algo fuerte
@@ -217,14 +217,14 @@ deberá venir expresado en semitonos.
     Basándonos en el articulo de John M Chowning y en nuestro código, hemos buscado la relación entre N1/N2 y la envolvente
     ADSR para cada uno de los instrumentos que se nos pide (campana y clarinete).
     
-    ####***Clarinete***
+    ***Clarinete***
     
     Aquí vemos según el articulo, la envolvente ADSR del instrumento Clarinete. Según esto, definimos nuestros parámetros.
     También, según el artículo la relación N1/N2 tiene que ser 3/1 y así lo dejamos.
     
     <img src="img/clarinete.png" width="640" align="center">
     
-    ####***Bell***
+    ***Bell***
     
     En la siguiente gráfica, observamos la envolvente ADSR de una campana. También observamos la relación N1/N2 tiene que ser
     1/1.4, esta si la seguimos, porque a demás al no ser entero, generamos una relación inarmónica como la de las campanas.

@@ -15,6 +15,7 @@ executable(
     sources: src,
     include_directories: inc,
     link_args: ['-lm', '-lsndfile'],
+    cpp_args: ['-DLINUX'],
     install: true,
 )
 
